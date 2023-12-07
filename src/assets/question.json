@@ -1,0 +1,99 @@
+{
+    "questions": [
+      {
+        "type": "multiple",
+        "question": "Quelle est la principale cause du réchauffement climatique ?",
+        "reponses": [
+          {
+            "reponse": "Les émissions de gaz à effet de serre",
+            "correcte": true
+          },
+          {
+            "reponse": "La déforestation",
+            "correcte": false
+          },
+          {
+            "reponse": "La pollution de l'air",
+            "correcte": false
+          },
+          {
+            "reponse": "Les activités humaines",
+            "correcte": false
+          }
+        ]
+      },
+      {
+        "type": "truefalse",
+        "question": "La Terre tourne autour du Soleil.",
+        "reponses": [
+          {
+            "reponse": "Vrai",
+            "correcte": true
+          },
+          {
+            "reponse": "Faux",
+            "correcte": false
+          }
+        ]
+      },
+      {
+        "type": "multiple",
+        "question": "Quel est l'impact de la pollution plastique sur les océans ?",
+        "reponses": [
+          {
+            "reponse": "La destruction de la faune marine",
+            "correcte": true
+          },
+          {
+            "reponse": "La contamination des ressources alimentaires",
+            "correcte": false
+          },
+          {
+            "reponse": "La formation de gyres de déchets",
+            "correcte": false
+          },
+          {
+            "reponse": "Toutes les réponses ci-dessus",
+            "correcte": false
+          }
+        ]
+      },
+      {
+        "type": "truefalse",
+        "question": "La photosynthèse est le processus par lequel les plantes convertissent la lumière du soleil en énergie.",
+        "reponses": [
+          {
+            "reponse": "Vrai",
+            "correcte": true
+          },
+          {
+            "reponse": "Faux",
+            "correcte": false
+          }
+        ]
+      },
+      {
+        "type": "multiple",
+        "question": "Qu'est-ce que la biodiversité ?",
+        "reponses": [
+          {
+            "reponse": "La variété des espèces vivantes",
+            "correcte": true
+          },
+          {
+            "reponse": "L'équilibre des écosystèmes",
+            "correcte": false
+          },
+          {
+            "reponse": "La diversité génétique",
+            "correcte": false
+          },
+          {
+            "reponse": "Toutes les réponses ci-dessus",
+            "correcte": false
+          }
+        ]
+      }
+    ]
+  }
+  

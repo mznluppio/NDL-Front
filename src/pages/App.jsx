@@ -1,13 +1,10 @@
-import { useState } from 'react'
-
+import Quizz from '../components/quizzComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      test
-    </>
+    <div>
+      <Quizz />
+    </div>
   )
 }
 
