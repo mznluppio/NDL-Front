@@ -1,4 +1,5 @@
 export default function Tri({ handleTriFinish }) {
+<<<<<<< Updated upstream
     const app = new PIXI.Application({
         width: window.innerWidth,
         height: window.innerHeight,
@@ -142,4 +143,9 @@ export default function Tri({ handleTriFinish }) {
 
         // Changer aléatoirement les couleurs des sprites
     }
+=======
+    return (
+        <iframe src="src\pages\index.html" title="Contenu HTML" width="100%" height="1080" />
+    );
+>>>>>>> Stashed changes
 }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixi.js Color Match Game with Images</title>
+    <script src="https://pixijs.download/v5.3.10/pixi.min.js"></script>
+</head>
+
+<body>
+    <script>
+        let jeuTimeout;
+
+        const app = new PIXI.Application({
+            width: window.innerWidth,
+            height: window.innerHeight,
+            backgroundColor: 0xFFFFFF,
+        });
+
+        let chemin ="../assets/images/";
+        const background = new PIXI.Sprite.from(chemin+'background.png');
+        background.width = 2000;
+        background.height = 2000;
+        background.x = -200;
+        background.y = -300;
+        app.stage.addChild(background);
+
+        document.body.appendChild(app.view);
+
+        let listWaste = [[chemin+"boulle_papier.png"], [chemin+"bouteille_verre.png"], [chemin+"peau_banane.png"]]
+
+        const centerObject = new PIXI.Sprite.from(listWaste[1][0]);
+        centerObject.x = app.screen.width * 0.85;
+        centerObject.y = app.screen.height * 0.05;
+
+        const circle = new PIXI.Graphics();
+        circle.lineStyle(10, 0x090909);
+        circle.drawCircle(app.screen.width * 0.88, app.screen.height * 0.12, 70);
+        app.stage.addChild(circle);
+
+        app.stage.addChild(centerObject);
+        let score = 0;
+        const scoreText = new PIXI.Text(`Score: ${score}`, { fill: 0x090909, fontSize: 24 });
+        scoreText.x = 10;
+        scoreText.y = 10;
+        app.stage.addChild(scoreText);
+
+        function stopGame() {
+            alert("Merci d'avoir joué !");
+        }
+
+        jeuTimeout = setTimeout(stopGame, 60000);
+
+        function generateNewObject() {
+            let tmp = Math.floor(Math.random() * 3);
+            currentColor = tmp;
+            centerObject.texture = PIXI.Texture.from(listWaste[tmp][0]);
+
+            clearTimeout(jeuTimeout);
+            jeuTimeout = setTimeout(stopGame, 60000);
+        }
+
+        const imageFiles = [chemin+'paper.png', chemin+'plastic.png', chemin+'organic.png'];
+        const loader = new PIXI.Loader();
+        imageFiles.forEach(file => loader.add(file));
+        loader.load(setup);
+
+        function setup() {
+            let int = 0;
+            const sprites = imageFiles.map(file => {
+                const sprite = new PIXI.Sprite(PIXI.Texture.from(file));
+                sprite.anchor.set(0.5);
+                sprite.x = Math.random() * app.renderer.width * 0.7 + app.renderer.width * 0.03;
+                sprite.y = Math.random() * app.renderer.height * 0.7 + app.renderer.height * 0.3;
+                sprite.vx = (Math.random() - 0.5) * 5;
+                sprite.vy = (Math.random() - 0.5) * 5;
+                sprite.interactive = true;
+                sprite.buttonMode = true;
+                sprite.tmp = int
+                sprite.on('pointerdown', () => checkColor(sprite.tmp));
+                int = int + 1;
+                app.stage.addChild(sprite);
+                return sprite;
+            });
+
+            app.ticker.add(() => {
+                sprites.forEach(sprite => {
+                    sprite.x += sprite.vx;
+                    sprite.y += sprite.vy;
+
+                    if (sprite.x - sprite.width / 2 < 0 && sprite.vx < 0) {
+                        sprite.vx *= -1;
+                    }
+                    if (sprite.y - sprite.height / 2 <= 0 && sprite.vy < 0) {
+                        sprite.vy *= -1;
+                    }
+                    if (sprite.x + sprite.width / 2 > app.renderer.width && sprite.vx > 0) {
+                        sprite.vx *= -1;
+                    }
+                    if (sprite.y + sprite.height / 2 >= app.renderer.height && sprite.vy > 0) {
+                        sprite.vy *= -1;
+                    }
+                });
+            });
+
+            generateNewObject();
+
+            function checkColor(color) {
+                if (color == currentColor) {
+                    updateScore();
+                } else {
+                    console.log('Wrong!');
+                }
+                generateNewObject();
+            }
+
+            function updateScore() {
+                score++;
+                sprites.forEach(sprite => {
+                    sprite.vx += score * 0.1;
+                    sprite.vy += score * 0.1;
+                });
+                scoreText.text = `Score: ${score}`;
+            }
+        }
+    </script>
+</body>
+
+</html>
