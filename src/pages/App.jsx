@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import StartButton from '../components/StartButton'
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-      
+      <StartButton></StartButton>
       
     </>
   )
