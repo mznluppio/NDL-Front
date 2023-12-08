@@ -26,6 +26,10 @@
 
         document.body.appendChild(app.view);
 
+        window.addEventListener('resize', () => {
+            app.renderer.resize(window.innerWidth, window.innerHeight);
+        });
+
         let listWaste = [["boulle_papier.png"], ["bouteille_verre.png"], ["peau_banane.png"]]
         // Ajout d'un objet au milieu de l'écran
         const centerObject = new PIXI.Sprite.from(listWaste[1][0]);
@@ -130,6 +134,10 @@
                 scoreText.text = `Score: ${score}`;
             }
 
+            setTimeout(() => {
+                alert(`Le jeu est terminé! Votre score est de ${score} points.`);
+                // Vous pouvez ajouter d'autres actions à effectuer lorsque le jeu est terminé.
+            }, 60000); // 60 000 millisecondes = 1 minute
 
 
         }
