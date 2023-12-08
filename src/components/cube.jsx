@@ -18,17 +18,9 @@ const CubeContainer = styled.div`
   transition: transform 1s; /* Ajoutez une transition pour créer un effet de déplacement en douceur */
 `;
 
-const predefinedCoordinates = [
-    { top: '400px', left: '100px' },
-    { top: '350px', left: '477px' },
-    { top: '600px', left: '800px' },
-    { top: '300px', left: '840px' },
-    { top: '500px', left: '300px' },
-    { top: '240px', left: '300px' },
-    // Ajoutez d'autres coordonnées au besoin
-];
 
-const Cube = ({ onCanetteArrivee }) => {
+
+const Cube = ({ predefinedCoordinates, onCanetteArrivee }) => {
     const [currentCoordinateIndex, setCurrentCoordinateIndex] = useState(0);
 
     const handleCubeClick = () => {

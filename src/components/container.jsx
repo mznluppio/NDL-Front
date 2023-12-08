@@ -21,19 +21,13 @@ const SmallCoquillage = styled(Coquillage)`
   height: 80px; /* Adjust the height for coquillageImage2 */
 `;
 
-const CoquillesContainer = () => {
-  const predefinedCoordinates = [
-    { top: '400px', left: '100px' },
-    { top: '350px', left: '477px' },
-    { top: '600px', left: '800px' },
-    { top: '300px', left: '840px' },
-    { top: '500px', left: '300px' },
-    { top: '240px', left: '300px' },
-    // Add more coordinates as needed
-  ];
+const CoquillesContainer = ({ predefinedCoordinates }) => {
+  
+  console.log(predefinedCoordinates);
 
   return (
     <div>
+      
       {predefinedCoordinates.map((coordinate, index) => (
         <div key={index}>
           {index % 2 === 0 ? (
@@ -57,6 +51,8 @@ const CoquillesContainer = () => {
           )}
         </div>
       ))}
+
+
     </div>
   );
 };
