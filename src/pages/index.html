@@ -27,7 +27,7 @@
 
         document.body.appendChild(app.view);
 
-        let listWaste = [[chemin+"boulle_papier.png"], [chemin+"bouteille_verre.png"], [chemin+"peau_banane.png"]]
+        let listWaste = [[chemin+"boulle_papier.png",chemin+"Sopalin.png"], [chemin+"bouteille_verre.png",chemin+"sac_plastique.png"], [chemin+"peau_banane.png",chemin+"pomme.png"]]
         // Ajout d'un objet au milieu de l'écran
         const centerObject = new PIXI.Sprite.from(listWaste[1][0]);
         centerObject.x = app.screen.width * 0.85;
@@ -146,7 +146,8 @@
             let tmp = Math.floor(Math.random() * 3);
             currentColor = tmp;
             console.log("oui");
-            centerObject.texture = PIXI.Texture.from(listWaste[tmp][0]);
+
+            centerObject.texture = PIXI.Texture.from(listWaste[tmp][Math.floor(Math.random()*2 )]);
 
             // Changer aléatoirement les couleurs des sprites
         }
