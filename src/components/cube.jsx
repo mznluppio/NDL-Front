@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Timer from '../components/Timer';
 import canette from '../assets/img/canette.png';
 
 const CubeContainer = styled.div`
@@ -20,7 +21,7 @@ const CubeContainer = styled.div`
 
 
 
-const Cube = ({ predefinedCoordinates, onCanetteArrivee }) => {
+const Cube = ({ predefinedCoordinates, onCanetteArrivee, timer, increaseScore }) => {
     const [currentCoordinateIndex, setCurrentCoordinateIndex] = useState(0);
 
     const handleCubeClick = () => {
@@ -31,7 +32,9 @@ const Cube = ({ predefinedCoordinates, onCanetteArrivee }) => {
             } while (newIndex === prevIndex);
             return newIndex;
         });
-        clearTimeout(autoDisappearTimeout);
+
+        // Augmentez le score en appelant la fonction passée en prop
+        increaseScore();
     };
 
     const currentCoordinate = predefinedCoordinates[currentCoordinateIndex];
@@ -39,26 +42,28 @@ const Cube = ({ predefinedCoordinates, onCanetteArrivee }) => {
     useEffect(() => {
         const autoDisappearTimeout = setTimeout(() => {
             setCurrentCoordinateIndex((prevIndex) => (prevIndex + 1) % predefinedCoordinates.length);
-            onCanetteArrivee(); // Appel de la fonction de rappel lorsque la canette arrive à ses coordonnées
+            onCanetteArrivee();
         }, 2000);
 
         return () => clearTimeout(autoDisappearTimeout);
     }, [currentCoordinateIndex, onCanetteArrivee]);
 
     return (
-        <CubeContainer
-            style={{
-                top: currentCoordinate.top,
-                left: currentCoordinate.left,
-                transform:
-                    currentCoordinateIndex % 3 === 1
-                        ? `translate(${Math.random() * 75 - 25}px, ${Math.random() * 75 - 25}px)`
-                        : 'translate(0)',
-            }}
-            onClick={handleCubeClick}
-        />
+        <div>
+            <CubeContainer
+                style={{
+                    top: currentCoordinate.top,
+                    left: currentCoordinate.left,
+                    transform:
+                        currentCoordinateIndex % 3 === 1
+                            ? `translate(${Math.random() * 75 - 25}px, ${Math.random() * 75 - 25}px)`
+                            : 'translate(0)',
+                }}
+                onClick={handleCubeClick}
+            />
+            <Timer time={timer} />
+        </div>
     );
 };
-
 
 export default Cube;
