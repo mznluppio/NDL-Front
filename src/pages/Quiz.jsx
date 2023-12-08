@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import QuizMultiple from '../components/QuizMultiple';
 import Velo from './Velo';
+import Tri from './Tri';
 
 const Quiz = () => {
     const [showQuiz, setShowQuiz] = useState(true);
     const [showGame, setShowGame] = useState(false);
-    const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(false);
+    const [tri, setTri] = useState(false);
+    const [quizCounter, setQuizCounter] = useState(0);
 
+    let score;
     const handleQuizFinish = (quizScore) => {
-        setScore(quizScore);
         setShowQuiz(false);
         setShowGame(true);
+        setQuizCounter(quizCounter + 1);
     };
 
     const handleGameFinish = () => {
@@ -19,11 +22,16 @@ const Quiz = () => {
         setGameOver(true);
     };
 
+    const handleTriFinish = () => {
+        setTri(true);
+    }
+
     return (
         <>
-            {showQuiz && !gameOver && <QuizMultiple onQuizFinish={handleQuizFinish} />}
-            {showGame && !gameOver && <Velo onGameFinish={handleGameFinish} />}
-            {gameOver && <QuizMultiple onQuizFinish={handleQuizFinish} />}
+            {showQuiz && !gameOver && quizCounter === 0 && <QuizMultiple onQuizFinish={handleQuizFinish} score={score} />}
+            {showGame && !gameOver && <Velo onGameFinish={handleGameFinish} score={score} />}
+            {gameOver && quizCounter === 1 && <QuizMultiple onQuizFinish={handleQuizFinish} score={score} />}
+            {tri && <Tri onTriFinish={handleTriFinish} />}
         </>
     );
 };

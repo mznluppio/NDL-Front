@@ -14,7 +14,7 @@ export default function QuizMultiple({ onQuizFinish }) {
         const tempQuestions = [...questionData.questions];
         const selected = [];
 
-        while (selected.length < 10 && tempQuestions.length > 0) {
+        while (selected.length < 5 && tempQuestions.length > 0) {
             const randomIndex = Math.floor(Math.random() * tempQuestions.length);
             selected.push(tempQuestions[randomIndex]);
             tempQuestions.splice(randomIndex, 1);
@@ -69,34 +69,29 @@ export default function QuizMultiple({ onQuizFinish }) {
         return <div>Loading...</div>;
     }
 
-    if (selectedQuestionIndex === 10) {
+    if (selectedQuestionIndex === 5) {
         handleQuizFinish();
         return <Score score={finalScore} />;
     }
 
     const currentQuestion = questions[selectedQuestionIndex];
-    const totalQuestions = 10;
+    const totalQuestions = 5;
     const progress = ((selectedQuestionIndex + 1) / totalQuestions) * 100;
 
 
 
     return (
-        <div>
-            <div style={{ width: '100%', height: '10px', backgroundColor: '#ddd' }}>
-                <div
-                    style={{
-                        width: `${progress}%`,
-                        height: '100%',
-                        backgroundColor: 'green',
-                    }}
-                />
+        <div className="quiz-container">
+            <div className="progress-bar">
+                <div className="progress" style={{ width: `${progress}%` }} />
             </div>
             <h1>{`Question ${selectedQuestionIndex + 1} of ${totalQuestions}`}</h1>
             <h2>{currentQuestion.question}</h2>
             <List>
                 {currentQuestion.reponses.map((answer, answerIndex) => (
-                    <ListItem key={answerIndex}>
+                    <ListItem key={answerIndex} className="answer-item">
                         <ListItemButton
+                            className="answer-button"
                             style={getButtonStyle(answerIndex)}
                             disabled={userAnswers[selectedQuestionIndex] !== undefined}
                             onClick={() => handleAnswer(answerIndex)}
@@ -107,7 +102,7 @@ export default function QuizMultiple({ onQuizFinish }) {
                 ))}
             </List>
             {showNextButton && (
-                <Button variant="contained" onClick={handleNextQuestion}>
+                <Button variant="contained" onClick={handleNextQuestion} className="next-button">
                     Question suivante
                 </Button>
             )}
