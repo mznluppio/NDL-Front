@@ -7,7 +7,7 @@ const Quiz = () => {
     const [showQuiz, setShowQuiz] = useState(true);
     const [showGame, setShowGame] = useState(false);
     const [gameOver, setGameOver] = useState(false);
-    const [tri, setTri] = useState(false);
+    const [tri, setTri] = useState(true);
     const [quizCounter, setQuizCounter] = useState(0);
 
     let score;

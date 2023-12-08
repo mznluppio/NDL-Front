@@ -1,11 +1,14 @@
+import * as PIXI from 'pixi.js';
 export default function Tri({ handleTriFinish }) {
+    console.log("oui");
     const app = new PIXI.Application({
         width: window.innerWidth,
         height: window.innerHeight,
         backgroundColor: 0xFFFFFF,
     });
-
-    const background = new PIXI.Sprite.from('background.png'); // Remplacez par l'URL de votre image
+    let chemin="src/assets/images/";
+    console.log(chemin+'background.png');
+    const background = new PIXI.Sprite.from(chemin+'background.png'); // Remplacez par l'URL de votre image
     background.width = 2000;
     background.height = 2000;
     background.x = -200;
@@ -18,7 +21,7 @@ export default function Tri({ handleTriFinish }) {
         app.renderer.resize(window.innerWidth, window.innerHeight);
     });
 
-    let listWaste = [["boulle_papier.png"], ["bouteille_verre.png"], ["peau_banane.png"]]
+    let listWaste = [[chemin+"boulle_papier.png"], [chemin+"bouteille_verre.png"], [chemin+"peau_banane.png"]]
     // Ajout d'un objet au milieu de l'écran
     const centerObject = new PIXI.Sprite.from(listWaste[1][0]);
     centerObject.x = app.screen.width * 0.85;
@@ -40,7 +43,7 @@ export default function Tri({ handleTriFinish }) {
 
 
     // Noms des fichiers images
-    const imageFiles = ['paper.png', 'plastic.png', 'organic.png']; // Remplacez par vos propres noms de fichiers
+    const imageFiles = [chemin+'paper.png', chemin+'plastic.png', chemin+'organic.png']; // Remplacez par vos propres noms de fichiers
 
     // Chargement des images
     const loader = new PIXI.Loader();
