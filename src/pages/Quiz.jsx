@@ -7,7 +7,7 @@ const Quiz = () => {
     const [showQuiz, setShowQuiz] = useState(true);
     const [showGame, setShowGame] = useState(false);
     const [gameOver, setGameOver] = useState(false);
-    const [tri, setTri] = useState(true);
+    const [tri, setTri] = useState(false);
     const [quizCounter, setQuizCounter] = useState(0);
 
     let score;
@@ -17,6 +17,10 @@ const Quiz = () => {
         setQuizCounter(quizCounter + 1);
     };
 
+    const handleQuizFinish2 = (quizScore) => {
+        setGameOver(false);
+        setTri(true);
+    };
     const handleGameFinish = () => {
         setShowGame(false);
         setGameOver(true);
@@ -30,8 +34,8 @@ const Quiz = () => {
         <>
             {showQuiz && !gameOver && quizCounter === 0 && <QuizMultiple onQuizFinish={handleQuizFinish} score={score} />}
             {showGame && !gameOver && <Velo onGameFinish={handleGameFinish} score={score} />}
-            {gameOver && quizCounter === 1 && <QuizMultiple onQuizFinish={handleQuizFinish} score={score} />}
-            {tri && <Tri onTriFinish={handleTriFinish} />}
+            {gameOver && quizCounter === 1 && <QuizMultiple onQuizFinish={handleQuizFinish2} score={score} />}
+            {tri && !gameOver && <Tri onTriFinish={handleTriFinish} />}
         </>
     );
 };
