@@ -1,0 +1,334 @@
+{
+    "questions": [
+        {
+            "type": "multiple",
+            "question": "Quelle est la principale cause du réchauffement climatique ?",
+            "reponses": [
+                {
+                    "reponse": "Les émissions de gaz à effet de serre",
+                    "correcte": true
+                },
+                {
+                    "reponse": "La déforestation",
+                    "correcte": false
+                },
+                {
+                    "reponse": "La pollution de l'air",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Les activités humaines",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'impact de la pollution plastique sur les océans ?",
+            "reponses": [
+                {
+                    "reponse": "La destruction de la faune marine",
+                    "correcte": true
+                },
+                {
+                    "reponse": "La contamination des ressources alimentaires",
+                    "correcte": false
+                },
+                {
+                    "reponse": "La formation de gyres de déchets",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Toutes les réponses ci-dessus",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Qu'est-ce que la biodiversité ?",
+            "reponses": [
+                {
+                    "reponse": "La variété des espèces vivantes",
+                    "correcte": true
+                },
+                {
+                    "reponse": "L'équilibre des écosystèmes",
+                    "correcte": false
+                },
+                {
+                    "reponse": "La diversité génétique",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Toutes les réponses ci-dessus",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel gaz est principalement responsable de l'effet de serre ?",
+            "reponses": [
+                {
+                    "reponse": "Le méthane",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Le dioxyde de carbone (CO2)",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Le protoxyde d'azote",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Le chlorofluorocarbone (CFC)",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel phénomène climatique est exacerbé par le réchauffement climatique ?",
+            "reponses": [
+                {
+                    "reponse": "Les cyclones tropicaux",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Les tempêtes de neige",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Les tremblements de terre",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Les éruptions volcaniques",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'effet de la fonte des glaciers sur le niveau des océans ?",
+            "reponses": [
+                {
+                    "reponse": "Elle n'a aucun impact sur le niveau des océans",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Elle contribue à l'élévation du niveau des océans",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Elle diminue le niveau des océans",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Elle provoque des marées plus hautes",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Comment les forêts aident-elles à réguler le climat ?",
+            "reponses": [
+                {
+                    "reponse": "Elles absorbent le dioxyde de carbone (CO2)",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Elles augmentent la pollution de l'air",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Elles libèrent du méthane dans l'atmosphère",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Elles accélèrent le réchauffement climatique",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'impact de la fonte des calottes glaciaires sur les espèces animales ?",
+            "reponses": [
+                {
+                    "reponse": "Cela favorise l'adaptation des espèces",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Cela conduit à la disparition de certaines espèces",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Cela n'a aucun effet sur les espèces animales",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Cela augmente la diversité des espèces",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'effet de l'acidification des océans sur les écosystèmes marins ?",
+            "reponses": [
+                {
+                    "reponse": "Elle favorise la croissance des coraux",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Elle perturbe la formation des coquilles et des squelettes des organismes marins",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Elle augmente la biodiversité marine",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Elle diminue la température de l'eau",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Comment le réchauffement climatique affecte-t-il les phénomènes météorologiques extrêmes ?",
+            "reponses": [
+                {
+                    "reponse": "Il n'a aucun impact sur les phénomènes météorologiques",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il les rend plus fréquents et plus intenses",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Il réduit la gravité des phénomènes météorologiques",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il ne change que les températures, pas les phénomènes météorologiques",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'impact du réchauffement climatique sur les cycles naturels de l'eau ?",
+            "reponses": [
+                {
+                    "reponse": "Il n'a aucun effet sur les cycles de l'eau",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il modifie les précipitations et les schémas de sécheresse",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Il accélère le cycle de l'eau sans changement significatif",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il réduit la quantité d'eau dans les océans",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'effet du réchauffement climatique sur les écosystèmes polaires ?",
+            "reponses": [
+                {
+                    "reponse": "Il n'a aucun impact sur les écosystèmes polaires",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il accroît la biodiversité dans les écosystèmes polaires",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il menace la survie des espèces adaptées aux conditions polaires",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Il rend les écosystèmes polaires plus stables",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'impact du réchauffement climatique sur les migrations animales ?",
+            "reponses": [
+                {
+                    "reponse": "Il n'a aucun effet sur les migrations animales",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il accélère les migrations animales",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il perturbe et modifie les schémas de migration",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Il diminue les migrations animales",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'effet du réchauffement climatique sur la santé humaine ?",
+            "reponses": [
+                {
+                    "reponse": "Il améliore la santé humaine en général",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il n'a aucun impact sur la santé humaine",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il augmente les risques de maladies liées à la chaleur et aux maladies infectieuses",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Il réduit les risques de maladies respiratoires",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "Quel est l'impact du réchauffement climatique sur l'agriculture ?",
+            "reponses": [
+                {
+                    "reponse": "Il améliore les rendements agricoles partout dans le monde",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il perturbe les schémas de culture et réduit les rendements dans certaines régions",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Il ne change rien aux pratiques agricoles",
+                    "correcte": false
+                },
+                {
+                    "reponse": "Il accroît la disponibilité des terres agricoles",
+                    "correcte": false
+                }
+            ]
+        }
+    ]
+}

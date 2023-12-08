@@ -1,0 +1,32 @@
+{
+    "questions": [
+        {
+            "type": "truefalse",
+            "question": "La Terre tourne autour du Soleil.",
+            "reponses": [
+                {
+                    "reponse": "Vrai",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Faux",
+                    "correcte": false
+                }
+            ]
+        },
+        {
+            "type": "truefalse",
+            "question": "La photosynthèse est le processus par lequel les plantes convertissent la lumière du soleil en énergie.",
+            "reponses": [
+                {
+                    "reponse": "Vrai",
+                    "correcte": true
+                },
+                {
+                    "reponse": "Faux",
+                    "correcte": false
+                }
+            ]
+        }
+    ]
+}
